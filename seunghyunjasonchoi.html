@@ -1,0 +1,376 @@
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i)
+        {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TRCV5M3');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171486922-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag()
+        {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        // Custome Dimention
+        // Configures custom dimension<Index> to use the custom parameter
+        // 'dimension_name' for 'GA_MEASUREMENT_ID', where <Index> is a number
+        // representing the index of the custom dimension.
+        gtag('config', 'UA-171486922-1', {
+            'custom_map': {
+                'dimension1': 'age',
+                'dimension2': 'user_rank'
+            }
+        });
+
+        gtag('event', 'given_event', {
+            'age': 12,
+            'user_rank': 'A'
+        });
+        /*
+        gtag('config', 'UA-171486922-1', {
+            'custom_map': { 'dimention1': 'dimension_name' }
+        });
+
+        // Sends the custom dimension to Google Analytics.
+        dimension_value = 100
+        gtag('event', 'any_event_name', { 'dimension_name': dimension_value });
+        */
+    </script>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- AIQUA Tag -->
+    <script src="https://cdn.qgraph.io/dist/aiqua-wp.js"></script>
+    <script type="text/javascript">
+        ! function (q, g, r, a, p, h, js)
+        {
+            if (q.qg) return;
+            js = q.qg = function ()
+            {
+                js.callmethod ? js.callmethod.call(js, arguments) : js.queue.push(arguments);
+            };
+            js.queue = [];
+            p = g.createElement(r);
+            p.async = !0;
+            p.src = a;
+            h = g.getElementsByTagName(r)[0];
+            h.parentNode.insertBefore(p, h);
+        }(window, document, 'script', '//cdn.qgr.ph/qgraph.4b994f1dc2ea472df47d.js');
+    </script>
+    <!-- /AIQUA Tag -->
+</head>
+
+<body class="bg-light">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRCV5M3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main class="container">
+        <div class="d-flex align-items-center p-3 my-3 bg-info rounded box-shadow">
+            <a aiq-tag="personalization-a" href="https://www.appier.com/">
+                <img aiq-tag="personalization-image" class="mr-3"
+                    src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/51/75/f2/5175f20b-23e3-21b8-3413-962734a68fde/AppIcon-0-1x_U007emarketing-0-85-220-10.png/246x0w.jpg"
+                    alt="" width="48" height="48">Appier
+            </a>
+            <div class="lh-100">
+                <h1 aiq-tag="personalization-text" class="mb-0 lh-100 text-white">AIQUA Event / Profile Logging via</h1>
+            </div>
+        </div>
+
+        <div class="border p-3 lh-100 align-items-center bg-white">
+            <div class="row">
+                <div class="col-md">
+                    <label class="font-weight-bold">Event: </label>
+                    <img src="./info_tip.jpeg" class="popover-dismiss" width="15px" data-toggle="popover"
+                        title="Example"
+                        data-content=' {"cart_item_dat_qg_json": "[{\"image_main\":\"https://titivate.jp/fs2cabinet/aux/auxp2339/auxp2339-m-01-pl.jpg\",\"image_sub\":\"https://titivate.jp/fs2cabinet/aux/auxp2339/auxp2339-m-02-pl.jpg\",\"price\":\"3229\",\"product_id\":\"AUXP2339\",\"product_name\":\"ポインテッドトゥセパレートパンプス\",\"color\":\"ブラック\",\"size\":\"LL\",\"checkout_datetime\":\"2019-08-07T15:46:09+09:00\"}]"} '>
+                    <div class="form-group form-inline">
+                        <label>qg( </label><input id="input-event-name" type="text" class="form-control col-3"
+                            value='product_viewed'>
+                        <input id="input-event-parameters" type="text" class="form-control col-6"
+                            value='{"product_id": 123, "name": "Brand Z shoes"}'>
+                        <input id="input-event-vts" type="text" class="form-control col-1" value=0>
+                        <label> );</label>
+                        <button id="btn-event" type="button" class="btn btn-primary ml-4">Submit</button>
+                    </div>
+                    <p class="border-bottom border-gray"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md">
+                    <label class="font-weight-bold">Profile: </label>
+                    <img src="./info_tip.jpeg" class="popover-dismiss" width="15px" data-toggle="popover"
+                        title="Example" data-content=' {"qg_filter_subscription_push": false} '>
+                    <br>
+                    <div class="form-group form-inline">
+                        <label>qg( </label><input id="input-profile" type="text" class="form-control col-10"
+                            value='{"user_id": 123}'>
+                        <label> );</label>
+                        <button id="btn-profile" type="button" class="btn btn-success ml-4">Submit</button>
+                    </div>
+                    <p class="border-bottom border-gray"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md">
+                    <label class="font-weight-bold">QG Method: </label>
+                    <img src="./info_tip.jpeg" class="popover-dismiss" width="15px" data-toggle="popover"
+                        title="Example" data-content=' {"qg_filter_subscription_push": false} '>
+                    <br>
+                    <div class="form-group form-inline">
+                        <label>qg( </label><input id="input-qg-method" type="text" class="form-control col-10"
+                            value='prompt-push'>
+                        <label> );</label>
+                        <button id="btn-qg-method" type="button" class="btn btn-danger ml-4">Submit</button>
+                    </div>
+                    <p class="border-bottom border-gray"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md">
+                    <label class="font-weight-bold">Recommendation: </label>
+                    <img src="./info_tip.jpeg" class="popover-dismiss" width="15px" data-toggle="popover"
+                        title="Example"
+                        data-content=' {"cart_item_dat_qg_json": "[{\"image_main\":\"https://titivate.jp/fs2cabinet/aux/auxp2339/auxp2339-m-01-pl.jpg\",\"image_sub\":\"https://titivate.jp/fs2cabinet/aux/auxp2339/auxp2339-m-02-pl.jpg\",\"price\":\"3229\",\"product_id\":\"AUXP2339\",\"product_name\":\"ポインテッドトゥセパレートパンプス\",\"color\":\"ブラック\",\"size\":\"LL\",\"checkout_datetime\":\"2019-08-07T15:46:09+09:00\"}]"} '>
+                    <br>
+                    <div class="form-group form-inline">
+                        <label>qg( </label><input id="input-recommendation-options" type="text" class="form-control col-10"
+                            value='{"scenarioId":"dCu6UWEeGMWkErb8YJQAnv","user_id":"","productId":"","filter": {"rules": [{"key": "category", "op": "eq", "val": "clothes > shirts"}]},"num":5}'>
+                        <label> );</label>
+                        <button id="btn-recommendation" type="button" class="btn btn-warning ml-4">Submit</button>
+
+                    </div>
+                    <p class="border-bottom border-gray"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <label class="font-weight-bold">Reference: </label>
+                    <img src="./info_tip.jpeg" class="popover-dismiss" width="15px" data-toggle="popover"
+                        title="Example" data-content='show information for debug'>
+                    <br>
+                    <div>
+
+                        <a href="https://www.google.com/"
+                            data-gtm-product="orix_seimei_orikkususeimei_teikihoken_bridge2">google2</a>
+                    </div>
+                    <div class="form-group form-inline">
+                        <ul>
+                            <li>
+                                <p>page_nativation:
+                                </p>
+                                <a href="https://www.google.com/"
+                                    data-gtm-product="orix_seimei_orikkususeimei_teikihoken_bridge2">
+                                    <button type="button">Add to favorites</button></a>
+
+                            </li>
+                            <li>
+                                <p><span id="device"></span></p>
+                            </li>
+                            <li>
+                                <p>referrer:
+                                    <script>
+                                        document.write(document.referrer)
+                                    </script>
+                                </p>
+                            </li>
+                            <li>
+                                <a href="https://h.apcloud.xyz/takashi/aiqua/bootstrap"
+                                    onclick="ga('send', 'event', 'home', 'credit-card-click', 'aiqua');">
+                                    <div class="c-card">
+                                        <div class="c-shadow-card__head">
+                                            GA event tag
+                                            <img width="48" height="48"
+                                                src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/51/75/f2/5175f20b-23e3-21b8-3413-962734a68fde/AppIcon-0-1x_U007emarketing-0-85-220-10.png/246x0w.jpg"
+                                                onload="ga('send','event','home','credit-card-imp','aiqua');">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div id="ytag_dbe">ytag_dbe</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="border-bottom border-gray"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main> DragPanel-panel
+
+
+    <script>
+        // cxenceid for Yahoota Tag Manager
+        var cX_G = Math.random();
+        var cxenseId = cX_G
+
+        qg('on', 'lineProfileReceived', function (payload)
+        {
+            if (payload && payload.lineUid && payload.lineChannelId)
+            {
+                console.log("lineuid: " + payload.lineUid + " / lineChannelId: " + payload.lineChannelId)
+                qg("identify", {
+                    "user_id": payload.lineUid
+                });
+            }
+        });
+
+        qg('on', 'inWebClosed', function (payload)
+        {
+            qg("event", "inweb_closed_" + payload.notificationId);
+        });
+
+
+        document.addEventListener("click", function (evt)
+        {
+            var clickedId = evt.target.id
+            try
+            {
+                if (clickedId === "btn-event")
+                {
+                    var eventName = document.getElementById("input-event-name").value;
+                    var parameters = JSON.parse(document.getElementById("input-event-parameters").value);
+                    var vts = Number(document.getElementById("input-event-vts").value);
+                    if (isNaN(vts))
+                    {
+                        throw new TypeError("vts contains string!!");
+                    }
+                    qg("event", eventName, parameters, vts)
+                } else if (clickedId === "btn-profile")
+                {
+                    var parameters = JSON.parse(document.getElementById("input-profile").value);
+                    qg("identify", parameters)
+                } else if (clickedId === "btn-qg-method")
+                {
+                    var parameters = document.getElementById("input-qg-method").value;
+                    qg(parameters)
+                } else if (clickedId === "btn-recommendation")
+                {
+                    var options = JSON.parse(document.getElementById("input-recommendation-options").value);
+                    qg('getRecommendationByScenario', options, function (err, recommendation)
+                    {
+                        if (!err)
+                        {
+                            for (var i = 0; i < recommendation.length; i++)
+                            {
+                                console.log(recommendation[i])
+                                //console.log(recommendation[i].title)
+                                //console.log(recommendation[i].url)
+                                //console.log(recommendation[i].category)
+                            }
+                        } else
+                        {
+                            console.log(err)
+                        }
+                    });
+                }
+            } catch (e)
+            {
+                window.alert(e);
+            }
+
+        });
+
+        // Detect Webview
+        var is_uiwebview = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
+        var deviceField = document.getElementById("device");
+        if (typeof window.aiqMobileSdk === "undefined")
+        {
+            deviceField.innerText = navigator.userAgent;
+        } else
+        {
+            if (is_uiwebview)
+            {
+                deviceField.innerText = "iOS Webview";
+            } else
+            {
+                deviceField.innerText = "Android Webview";
+            }
+        }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        $('[data-toggle="popover"]').popover();
+
+        $('body').on('click', function (e)
+        {
+            $('[data-toggle="popover"]').each(function ()
+            {
+                //the 'is' for buttons that trigger popups
+                //the 'has' for icons within a button that triggers a popup
+                if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0)
+                {
+                    $(this).popover('hide');
+                }
+            });
+        });
+    </script>
+    <!-- YTM -->
+    <script type="text/javascript">
+        (function ()
+        {
+            var tagjs = document.createElement("script");
+            var s = document.getElementsByTagName("script")[0];
+            tagjs.async = true;
+            tagjs.src = "//s.yjtag.jp/tag.js#site=j5qEJcz";
+            s.parentNode.insertBefore(tagjs, s);
+        }());
+    </script>
+    <noscript>
+        <iframe src="//b.yjtag.jp/iframe?c=j5qEJcz" width="1" height="1" frameborder="0" scrolling="no" marginheight="0"
+            marginwidth="0"></iframe>
+    </noscript>
+    <!-- /YTM -->
+    <a aiq-tag="aiqua-anchor" href="https://www.toysrus.co.jp/s/dsg-701579800" onclick="none">
+        【2021年3月27日発売】仮面ライダーセイバーDXプリミティブドラゴン＆エレメンタルドラゴンワンダーライドブックセット【送料無料】
+    </a>
+
+
+
+</body>
+
+</html>
