@@ -96,9 +96,9 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #228C22;
+  background-color: #008cba;
   color: white;
-  padding: 14px 20px;
+  padding: 15px 32px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
